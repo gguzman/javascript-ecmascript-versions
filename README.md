@@ -6,7 +6,47 @@ Actualmente el estándar ECMAScript, se encuentra en la versión ECMAScript 2019
 
 ## Indice
 
-[Versión ES5 y ES6](#versión-es5-y-es6)
+- [ES5 y ES6](#versión-es5-y-es6)
+  - [Función Arrow](#función-arrow)
+  - [Clases](#clases)
+  - [This](#this)
+  - [Let y const](#let-y-const)
+  - [Template Strings](#template-strings)
+  - [Destructuring](#destructuring)
+  - [Valores por defecto](#valores-por-defecto)
+  - [Módulos](#módulos)
+- [ES7](#versión-es7)
+  - [Array.prototype.includes(var)](#arrayprototypeincludesvar)
+  - [Operador de exponenciación ()\*\*](#operador-de-exponenciación-)
+- [ES8](#versión-es8)
+  - [Funciones asíncronas](#funciones-asíncronas)
+  - [Object.entries()](#objectentriesobj)
+  - [Object.values()](#objectvaluesobj)
+  - [String.padStart()](#stringpadstartnum-string)
+  - [Object.getOwnPropertyDescriptors()](#objectgetownpropertydescriptors)
+- [ES9](#versión-es9)
+  - [Rest/Spread properties](#restspread-properties)
+  - [Promise: finally()](#promise-finally)
+  - [Iteración asíncrona](#iteración-asíncrona)
+  - [Cambios en regexp](#cambios-en-regexp)
+- [ES10](#versión-es10)
+  - [Array.flat()](#arrayflat)
+  - [Array.flatMap()](#arrayflatmap)
+  - [Object.fromEntries()](#objectfromentries)
+  - [String.trimStart() & String.trimEnd()](#stringtrimstart--stringtrimend)
+  - [Enlace de captura opcional](#enlace-de-captura-opcional)
+  - [Function.toString()](#symboldescription)
+  - [Symbol.description](#objectfromentries)
+  - [JSON.Stringify()](#jsonstringify)
+- [ES11](#versión-es11)
+  - [Import](#import)
+  - [Bigint](#bigint)
+  - [Promise.allSettled()](#promiseallsettled)
+  - [Nullish Coalescing Operator (??)](#nullish-coalescing-operator-)
+  - [Optional Chaining (?.)](#optional-chaining-)
+  - [GlobalThis](#globalthis)
+  - [String.prototype.matchAll()](#stringprototypematchall)
+- [ES12](#versión-es12)
 
 ## Versión ES5 y ES6
 
@@ -801,20 +841,21 @@ const globalObject = () => {
 
 Ahora con el **globalThis** no hace falta, ya que podemos acceder desde cualquier entorno/plataforma con solo llamarlo.
 
-#### String.prototype.matchAll
+#### String.prototype.matchAll()
 
 Este nuevo método nos devuelve un iterador con todos los resultados coincidentes en una cadena de texto usando una expresión regular.
 
 ```js
-const myArrayOfPromises = [
-  Promise.resolve(myPromise),
-  Promise.reject(0),
-  Promise.resolve(anotherPromise),
-];
+const regexp = /t(e)(st(\d?))/g;
+const str = "test1test2";
 
-Promise.AllSettled(myArrayOfPromises).then((result) => {
-  // Do your stuff
-});
+const array = [...str.matchAll(regexp)];
+
+console.log(array[0]);
+// expected output: Array ["test1", "e", "st1", "1"]
+
+console.log(array[1]);
+// expected output: Array ["test2", "e", "st2", "2"]
 ```
 
 ## ES12
