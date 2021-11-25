@@ -2,7 +2,11 @@
 
 JavaScript es un lenguaje ligero e interpretado, dialecto del estándar ECMAScript, orientado a objetos con funciones de primera clase. Se utiliza principalmente en su forma del lado del cliente, implementando como parte de un navegador web permitiendo mejoras en la interfaz de usuario y páginas web dinámicas.
 
-Actualmente el estándar ECMAScript, se encuentra en la versión ECMAScript 2019. A partir de las versiones ES5 y ES6 agregaron cambios significativos al lenguaje. Veremos algunos de ellos en este tutorial hasta la actual versión ES10.
+Actualmente el estándar ECMAScript, se encuentra en la versión ECMAScript 2019. A partir de las versiones ES5 y ES6 agregaron cambios significativos al lenguaje. Veremos algunos de ellos en este tutorial hasta la actual versión ES12.
+
+## Indice
+
+[Versión ES5 y ES6](#versión-es5-y-es6)
 
 ## Versión ES5 y ES6
 
