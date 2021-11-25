@@ -1,4 +1,4 @@
-# Novedades en JavaScript: Repaso a todas ellas, desde la versión ES5 hasta la ES10
+# Novedades en JavaScript: Repaso a todas ellas, desde la versión ES5 hasta la ES12
 
 JavaScript es un lenguaje ligero e interpretado, dialecto del estándar ECMAScript, orientado a objetos con funciones de primera clase. Se utiliza principalmente en su forma del lado del cliente, implementando como parte de un navegador web permitiendo mejoras en la interfaz de usuario y páginas web dinámicas.
 
