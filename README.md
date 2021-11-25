@@ -47,6 +47,14 @@ Actualmente el estándar ECMAScript, se encuentra en la versión ECMAScript 2019
   - [GlobalThis](#globalthis)
   - [String.prototype.matchAll()](#stringprototypematchall)
 - [ES12](#versión-es12)
+  - [Logical Assignment Operators (&&= ||= ??=)](#logical-assignment-operators---)
+  - [Numeric Separator](#numeric-separator)
+  - [Promise.any()](#promiseany)
+  - [AggregateEerror](#aggregateerror)
+  - [Método .replaceAll()](#método-replaceall)
+  - [Métodos de clase privados](#métodos-de-clase-privados)
+  - [Getters y setters privados](#getters-y-setters-privados)
+  - [WeakRef](#weakref)
 
 ## Versión ES5 y ES6
 
