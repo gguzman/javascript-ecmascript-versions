@@ -246,10 +246,43 @@ https://www.imaginaformacion.com/tutoriales/tutorial_25_imagen_1.jpg
 La novedad más importante de esta versión son las funciones asíncronas, que devuelven promesas y se tienen que declarar con la keyword `async` delante de la declaración de la función. Solamente dentro de estas funciones podemos usar `await` e indicará que se detenga hasta que no esté resuelta la promesa de la función y cuando lo esté continuará con la ejecución normal. Utilizando `async/await`, se simplificará todo mucho mucho más pudiendo ejecutar código asíncrono como si fuese síncrono.
 
 ```js
-const base = 3;
-const exponente = 10;
-console.log(base \*\* exponente);
-console.log(Math.pow(base, exponente));
+const fetch = require('node-fetch');
+ 
+// declaración de función asíncrona
+async function requestGet(url) {
+  let response = await fetch(url);
+  if (response.ok) {
+    return await response.json();
+  }
+  throw new Error(`Status: ${response.status}, Status text: ${response.statusText}`);
+}
+ 
+// llamada con función asíncrona
+(async () => {
+  try {
+    const posts = await requestGet('https://jsonplaceholder.typicode.com/posts');
+    const firstPostUser = posts[0]['userId'];
+    // console.log(firstPostUser);
+    const user = await requestGet(`https://jsonplaceholder.typicode.com/users/${firstPostUser}`);
+    console.log(`User: ${user.name}`);
+  } catch (err) {
+    console.log(err);
+  }
+})();
+ 
+// llamada con promesas
+requestGet('https://jsonplaceholder.typicode.com/posts')
+  .then((posts) => {
+    let firstPostUser = posts[0]['userId'];
+    // console.log(`firstPostUser: ${firstPostUser}`)
+    return requestGet(`https://jsonplaceholder.typicode.com/users/${firstPostUser}`);
+  })
+  .then((user) => {
+    console.log(`User: ${user.name}`);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 ```
 
 https://www.imaginaformacion.com/tutoriales/tutorial_25_imagen_2.jpg
