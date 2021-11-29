@@ -243,7 +243,7 @@ https://www.imaginaformacion.com/tutoriales/tutorial_25_imagen_1.jpg
 
 #### Funciones asíncronas
 
-La novedad más importante de esta versión son las funciones asíncronas, que devuelven promesas y se tienen que declarar con la keyword asinc delante de la declaración de la función. Solamente dentro de estas funciones podemos usar await e indicará que se detenga hasta que no esté resuelta la promesa de la función y cuando lo esté continuará con la ejecución normal. Utilizando async/await, se simplificará todo mucho mucho más pudiendo ejecutar código asíncrono como si fuese síncrono.
+La novedad más importante de esta versión son las funciones asíncronas, que devuelven promesas y se tienen que declarar con la keyword `async` delante de la declaración de la función. Solamente dentro de estas funciones podemos usar `await` e indicará que se detenga hasta que no esté resuelta la promesa de la función y cuando lo esté continuará con la ejecución normal. Utilizando `async/await`, se simplificará todo mucho mucho más pudiendo ejecutar código asíncrono como si fuese síncrono.
 
 ```js
 const base = 3;
