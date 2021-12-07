@@ -924,6 +924,37 @@ x && (x = y);
 x ??= y;
 // Equivale a...
 x ?? (x = y);
+
+// Ejemplos:
+// '||' evalua todos los valores falsos del lado izquierdo, sino regresa el derecho.
+// Valores falsos para JS
+// undefined, null, false, 0, '', NaN
+
+let value = null
+const test = value || 'hola'
+console.log(value ||= 'hola')
+//es lo mismo que, value = null || 'hola'
+
+console.log(test) // 'hola'
+console.log(value) // 'hola'
+
+// '??' Solo evalua los valores null y undefined
+const test4 = null ?? 'hola'
+// console.log(test4) => 'hola'
+
+let value2 = ''
+const test3 = value2 ?? 'hola'
+console.log(value2 ??= 'hola') // ''
+// value2 = '' ?? 'hola'
+
+console.log(test3) // ''
+console.log(value2) // ''
+
+// Comparacion entre '||' y '??'
+const test5 = 0 || 'hola' // evalua si el lado izq. contiene un valor falsy
+const test6 = 0 ?? 'hola' // evalua si el lado izq. contiene un null o undefined.
+console.log(test5) // 'hola'
+console.log(test6) // 0
 ```
 
 Hay que tener en cuenta que en estas asignaciones, además, entra el juego la evaluación short-circuit. Esto quiere decir que estas asignaciones lógicas se evaluan de izquierda a derecha. **Si una expresión lógica no se cumple, no se evalúa la siguiente.**
